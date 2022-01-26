@@ -11,6 +11,7 @@ let newHeight = document.createElement('div');
 let newWeight = document.createElement('div');
 let newDivision = document.createElement('div');
 let newAppearance = document.createElement('div');
+let appearanceTemp = document.createElement('div');
 let newScene = document.createElement('img');
 
 for (let i = 0; i < $character_img.length; i++) {
@@ -28,12 +29,20 @@ for (let i = 0; i < $character_img.length; i++) {
     newHeight.textContent = `신장: ${data[heroname].height}`;
     newWeight.textContent = `무게: ${data[heroname].weight}`;
     newDivision.textContent = `소속: ${data[heroname].division}`;
-    newAppearance.textContent = `출연 영화: ${data[heroname].appearance}`;
+    appearanceTemp.textContent = '출연 영화';
+    newAppearance.textContent = `${data[heroname].appearance}`;
+    appearanceTemp.style.borderBottom = 'none';
+    appearanceTemp.style.paddingTop = '8px';
+    appearanceTemp.style.paddingRight = '8px';
+    appearanceTemp.style.paddingLeft = '8px';
+    appearanceTemp.style.paddingBottom = '0';
+    newAppearance.style.borderBottom = 'none';
     $modal_content.appendChild(newName);
     $modal_content.appendChild(newBirthday);
     $modal_content.appendChild(newHeight);
     $modal_content.appendChild(newWeight);
     $modal_content.appendChild(newDivision);
+    $modal_content.appendChild(appearanceTemp);
     $modal_content.appendChild(newAppearance);
 
     newScene.src = `./img/character_${heroname}_scene.gif`;
