@@ -55,6 +55,9 @@ table {
 body{
     min-width: 1080px;
     font-family: 'Vitro_core';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*헤더 (임시)*/
@@ -89,3 +92,50 @@ section {
 }
 
 /*메인 컨텐츠*/
+main{
+  width: 1100px; 
+}
+/*메인 뉴스 카드*/
+.main{
+    position: relative;
+}
+.main_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+.main_card img{
+    width: 1100px;
+    height: 400px;
+}
+.main_news_text{
+    width: 700px;
+    position: absolute;
+    text-align: center;
+    font-size: 56px;
+    color: #000;
+    bottom: 20px;
+    right: 0;
+}
+.main_card:hover > .main_news_text{
+    text-decoration: underline;
+}
+.main_card:hover{
+    transform:scale(1.03); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+    transition: transform .35s;  
+}
+
+/*서브 뉴스 카드*/
+.sub_cards{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sub_cards img{
+    display: inline-block;
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+}
