@@ -75,7 +75,7 @@ section {
     background-image: url("../img/main.jfif");
     background-size: cover;
 }
-.News{
+.news{
     position: absolute;
     display: inline-block;
     font-size: 72px;
@@ -83,14 +83,28 @@ section {
     left: 30px;
     bottom: 50px;
 }
-.News::after{
+.news::after{
     content: "";
     display: block;
     width: 600px;
     border-bottom: solid 7px #fff;
     margin-top: 20px;
 }
-
+/*서브 타이틀*/
+.sub_title{
+    margin-top: 100px;
+    width: 1200px;
+    display: inline-block;
+    font-size: 48px;
+    text-align: left;
+}
+.sub_title::after{
+    content: "";
+    display: block;
+    width: 600px;
+    border-bottom: solid 7px #000;
+    margin-top: 20px;
+}
 /*메인 컨텐츠*/
 main{
   width: 1100px; 
@@ -115,6 +129,7 @@ main{
     text-align: center;
     font-size: 56px;
     color: #000;
+    text-shadow: 2px 2px 2px #fff;
     bottom: 20px;
     right: 0;
 }
