@@ -35,23 +35,22 @@ body {
   align-items: center;
 }
 
-.movies {
+.characters {
   /* border: 1px solid blue; */
   display: flex;
-  flex-wrap: nowrap;
-  width: 1180px;
-  height: 320px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1200px;
+  height: 800px;
   overflow: scroll;
   padding: 20px;
 }
 
-.divide {
-  margin-top: 30px;
-  width: 1200px;
-  font-size: 26px;
+.characters::-webkit-scrollbar {
+  display: none;
 }
 
-.movies img {
+.characters img {
   width: 200px;
   height: 300px;
   margin: 20px;
@@ -59,7 +58,7 @@ body {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
 }
 
-.movies .name {
+.characters .name {
   text-align: center;
 }
 
@@ -83,7 +82,7 @@ body {
   border-radius: 10px;
   /* border: 1px solid rgba(255, 255, 255, 0.18); */
   width: 700px;
-  height: 500px;
+  height: auto;
   display: block;
   align-items: center;
   top: -100px;
