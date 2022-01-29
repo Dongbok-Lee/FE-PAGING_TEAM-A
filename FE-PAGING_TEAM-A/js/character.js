@@ -19,7 +19,6 @@ for (let i = 0; i < $character_img.length; i++) {
   $character_img[i].addEventListener('click', e => {
     const temp = e.target.src;
     let heroname = temp.slice(temp.search('img') + 24, -4); // jpg, png
-    console.log(heroname);
 
     newImg.src = `./img/character/character_${heroname}.jpg`;
     $modal_img.appendChild(newImg);
