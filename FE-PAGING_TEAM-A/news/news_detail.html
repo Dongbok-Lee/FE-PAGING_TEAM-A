@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/news_detail.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -12,6 +16,19 @@
     <section>
         <h1 class="news">News</h1>
     </section>
+    <div class = "title">
+        <h1 class="news_title"></h1>
+    </div>
+    <hr>
+    <div class="article_content">
+        <div class="article_info">
+            <p class= "date"></p>
+            <p class= "reporter"></p>
+        </div>
+        <img class = "article_image" src="" alt="기사 이미지">
+        <div class="article_text"></div>
+    </div>
     <script src="./data/news.json"></script>
+    <script src="./js/news_detail.js"></script>
 </body>
 </html>
