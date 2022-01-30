@@ -6,8 +6,17 @@ const $modal_scene = document.querySelector('.modal_scene');
 const $containter = document.querySelector('.container');
 const $transBtn = document.querySelector('.transBtn');
 const $movies = document.querySelector('.movies');
-let $newImg = document.createElement('img');
-let $newName = document.createElement('div');
+
+let newImg = document.createElement('img');
+let newName = document.createElement('div');
+let newRunningTime = document.createElement('div');
+let newRating = document.createElement('div');
+let newDirector = document.createElement('div');
+let newAppearance = document.createElement('div');
+let newPlot = document.createElement('div');
+let newUpcomingday = document.createElement('div');
+let newEpisodes = document.createElement('div');
+let newChannel = document.createElement('div');
 
 let data = JSON.parse(JSON.stringify(Params));
 let releasedLength = Object.keys(data["released"]).length;
@@ -49,9 +58,61 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   // 영화 or 드라마 이미지들 넣기
   for (let i = 0; i < length; i++) {
     let movies_img = document.createElement('img');
-    movies_img.src = `./img/movie/movie_${data[kind][i].source}.jpg`;
-
     let movies_div = document.createElement('div');
+    let imgSrc = `./img/movie/movie_${data[kind][i].source}.jpg`;
+    movies_img.src = imgSrc;
+
+    movies_img.addEventListener('click', (e) => {
+      newImg.src = imgSrc;
+      $modal_img.appendChild(newImg);
+
+      if (kind == 'released') {
+        newName.textContent = `제목: ${data[kind][i].name}`;
+        newRunningTime.textContent = `상영 시간: ${data[kind][i].runningtime}`;
+        newRating.textContent = `평점: ${data[kind][i].rating}`;
+        newDirector.textContent = `감독: ${data[kind][i].director}`;
+        newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
+        newPlot.textContent = `줄거리: ${data[kind][i].plot}`;
+        newPlot.style.borderBottom = 'none';
+        $modal_content.appendChild(newName);
+        $modal_content.appendChild(newRunningTime);
+        $modal_content.appendChild(newRating);
+        $modal_content.appendChild(newDirector);
+        $modal_content.appendChild(newAppearance);
+        $modal_content.appendChild(newPlot);
+      }
+      if (kind == 'upcoming') {
+        newName.textContent = `제목: ${data[kind][i].name}`;
+        newUpcomingday.textContent = `개봉 예정일: ${data[kind][i].upcomingDay}`;
+        newDirector.textContent = `감독: ${data[kind][i].director}`;
+        newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
+        newAppearance.style.borderBottom = 'none';
+        $modal_content.appendChild(newName);
+        $modal_content.appendChild(newUpcomingday);
+        $modal_content.appendChild(newDirector);
+        $modal_content.appendChild(newAppearance);
+      }
+      if (kind == 'drama') {
+        newName.textContent = `제목: ${data[kind][i].name}`;
+        newUpcomingday.textContent = `방영 예정일: ${data[kind][i].upcomingDay}`;
+        newEpisodes.textContent = `에피소드: ${data[kind][i].episodes}`;
+        newChannel.textContent = `방영 채널: ${data[kind][i].channel}`;
+        newDirector.textContent = `감독: ${data[kind][i].director}`;
+        newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
+        newPlot.textContent = `줄거리: ${data[kind][i].plot}`;
+        newPlot.style.borderBottom = 'none';
+        $modal_content.appendChild(newName);
+        $modal_content.appendChild(newUpcomingday);
+        $modal_content.appendChild(newEpisodes);
+        $modal_content.appendChild(newChannel);
+        $modal_content.appendChild(newDirector);
+        $modal_content.appendChild(newAppearance);
+        $modal_content.appendChild(newPlot);
+      }
+
+      $modal.style.display = 'flex';
+    });
+
     movies_div.appendChild(movies_img);
     movies_div.classList.add(kind);
     $movies.appendChild(movies_div);
@@ -83,7 +144,6 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   });
 }
 
-
 // 자식노드들 전부 삭제하는 함수
 function removeChildAll(parent) {
   while (parent.hasChildNodes()) {
@@ -95,16 +155,17 @@ function removeChildAll(parent) {
 $closeBtn.addEventListener("click", e => {
   $modal.style.display = "none";
   $modal_img.removeChild(newImg);
-  $modal_img.removeChild(newScene);
 });
 $modal.addEventListener("click", e => {
   const evTarget = e.target
   if (evTarget.classList.contains("modal_overlay")) {
     $modal.style.display = "none";
+    $modal_img.removeChild(newImg);
   }
 });
 window.addEventListener("keyup", e => {
   if ($modal.style.display === "flex" && e.key === "Escape") {
     $modal.style.display = "none";
+    $modal_img.removeChild(newImg);
   }
 });
