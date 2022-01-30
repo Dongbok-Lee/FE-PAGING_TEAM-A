@@ -1,5 +1,8 @@
+const $body = document.querySelector('body');
 const $modal = document.querySelector('#modal');
 const $closeBtn = document.querySelector(".close_area");
+const $modal_window = document.querySelector('.modal_window');
+const $modal_area = document.querySelector(".modal_area");
 const $modal_img = document.querySelector('.modal_img');
 const $modal_content = document.querySelector('.modal_content');
 const $modal_scene = document.querySelector('.modal_scene');
@@ -13,6 +16,7 @@ let newRunningTime = document.createElement('div');
 let newRating = document.createElement('div');
 let newDirector = document.createElement('div');
 let newAppearance = document.createElement('div');
+let plotTemp = document.createElement('div');
 let newPlot = document.createElement('div');
 let newUpcomingday = document.createElement('div');
 let newEpisodes = document.createElement('div');
@@ -62,59 +66,71 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
     let imgSrc = `./img/movie/movie_${data[kind][i].source}.jpg`;
     movies_img.src = imgSrc;
 
-    movies_img.addEventListener('click', (e) => {
+    movies_img.addEventListener('click', () => {
       newImg.src = imgSrc;
       $modal_img.appendChild(newImg);
-
       if (kind == 'released') {
-        newName.textContent = `제목: ${data[kind][i].name}`;
+        newName.textContent = `${data[kind][i].name}`;
         newRunningTime.textContent = `상영 시간: ${data[kind][i].runningtime}`;
         newRating.textContent = `평점: ${data[kind][i].rating}`;
         newDirector.textContent = `감독: ${data[kind][i].director}`;
         newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
-        newPlot.textContent = `줄거리: ${data[kind][i].plot}`;
-        newPlot.style.borderBottom = 'none';
+        newPlot.textContent = `${data[kind][i].plot}`;
+        plotTemp.textContent = '줄거리';
+        plotTemp.style.paddingTop = '8px';
+        plotTemp.style.paddingRight = '8px';
+        plotTemp.style.paddingLeft = '8px';
+        plotTemp.style.paddingBottom = '0';
+        plotTemp.style.borderBottom = 'none';
         $modal_content.appendChild(newName);
         $modal_content.appendChild(newRunningTime);
         $modal_content.appendChild(newRating);
         $modal_content.appendChild(newDirector);
         $modal_content.appendChild(newAppearance);
+        $modal_content.appendChild(plotTemp);
         $modal_content.appendChild(newPlot);
       }
       if (kind == 'upcoming') {
-        newName.textContent = `제목: ${data[kind][i].name}`;
+        newName.textContent = `${data[kind][i].name}`;
         newUpcomingday.textContent = `개봉 예정일: ${data[kind][i].upcomingDay}`;
         newDirector.textContent = `감독: ${data[kind][i].director}`;
         newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
-        newAppearance.style.borderBottom = 'none';
         $modal_content.appendChild(newName);
         $modal_content.appendChild(newUpcomingday);
         $modal_content.appendChild(newDirector);
         $modal_content.appendChild(newAppearance);
       }
       if (kind == 'drama') {
-        newName.textContent = `제목: ${data[kind][i].name}`;
+        newName.textContent = `${data[kind][i].name}`;
         newUpcomingday.textContent = `방영 예정일: ${data[kind][i].upcomingDay}`;
         newEpisodes.textContent = `에피소드: ${data[kind][i].episodes}`;
         newChannel.textContent = `방영 채널: ${data[kind][i].channel}`;
         newDirector.textContent = `감독: ${data[kind][i].director}`;
         newAppearance.textContent = `출연진: ${data[kind][i].appearance}`;
-        newPlot.textContent = `줄거리: ${data[kind][i].plot}`;
-        newPlot.style.borderBottom = 'none';
+        newPlot.textContent = `${data[kind][i].plot}`;
+        plotTemp.textContent = '줄거리';
+        plotTemp.style.paddingTop = '8px';
+        plotTemp.style.paddingRight = '8px';
+        plotTemp.style.paddingLeft = '8px';
+        plotTemp.style.paddingBottom = '0';
+        plotTemp.style.borderBottom = 'none';
         $modal_content.appendChild(newName);
         $modal_content.appendChild(newUpcomingday);
         $modal_content.appendChild(newEpisodes);
         $modal_content.appendChild(newChannel);
         $modal_content.appendChild(newDirector);
         $modal_content.appendChild(newAppearance);
+        $modal_content.appendChild(plotTemp);
         $modal_content.appendChild(newPlot);
       }
 
+      $modal.style.top = `${($modal.getBoundingClientRect().top) / 2 + window.scrollY}px`;
+      console.log($modal.style.top);
       $modal.style.display = 'flex';
+      $body.classList.add('stop-scroll');
     });
 
     movies_div.appendChild(movies_img);
-    movies_div.classList.add(kind);
     $movies.appendChild(movies_div);
   }
 
@@ -144,28 +160,34 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   });
 }
 
-// 자식노드들 전부 삭제하는 함수
-function removeChildAll(parent) {
-  while (parent.hasChildNodes()) {
-    parent.removeChild(parent.firstChild);
-  }
-}
-
 // 모달 관련 클릭 이벤트
 $closeBtn.addEventListener("click", e => {
   $modal.style.display = "none";
-  $modal_img.removeChild(newImg);
+  $body.classList.remove('stop-scroll');
+  removeChildAll($modal_content);
 });
 $modal.addEventListener("click", e => {
   const evTarget = e.target
   if (evTarget.classList.contains("modal_overlay")) {
     $modal.style.display = "none";
-    $modal_img.removeChild(newImg);
+    $body.classList.remove('stop-scroll');
+    removeChildAll($modal_content);
   }
 });
 window.addEventListener("keyup", e => {
   if ($modal.style.display === "flex" && e.key === "Escape") {
     $modal.style.display = "none";
-    $modal_img.removeChild(newImg);
+    $body.classList.remove('stop-scroll');
+    removeChildAll($modal_content);
   }
 });
+
+
+// 자식 노드들 모두 삭제하는 함수
+const removeChildAll = (parent) => {
+  while (parent.hasChildNodes()) {
+    parent.removeChild(
+      parent.firstChild
+    );
+  }
+}
