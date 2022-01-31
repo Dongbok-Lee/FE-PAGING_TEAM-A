@@ -12,7 +12,7 @@ const newMyArr = () => {
     cur = datas.articles[getParam()];
     $(".news_title").append(cur.title)
     $(".article_info .date").append(cur.date);
-    $(".article_info .reporter").append(cur.press + " " + cur.reporter);
+    $(".article_info .reporter").append(cur.press + "  " + cur.reporter + " 기자");
     $(".article_image").attr("src",cur.image)
     $(".article_text").append(cur.contents)
 }
