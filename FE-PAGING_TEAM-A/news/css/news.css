@@ -51,6 +51,8 @@ table {
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+
 /*전체*/
 body{
     min-width: 1080px;
