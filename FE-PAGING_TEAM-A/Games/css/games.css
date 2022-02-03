@@ -60,7 +60,6 @@ body {
 
 /* 배경 */
 .bg {
-    min-width: 1080px;
     background-image: url("../img/main.jpg");
     background-position: center;
     background-size: cover;
@@ -96,36 +95,36 @@ main {
 
 /* 게임 설명 */
 .game_title {
-    width: 700px;
+    width: 950px;
     font-size: 48px;
     color: #fff;
-    margin-left: 114px;
+    margin: auto;
     padding-bottom: 28px;
     border-bottom: 3px solid #9E9E9E;
 }
 
 .game2_title {
-    width: 700px;
+    width: 950px;
     font-size: 48px;
     color: #fff;
-    margin: 220px 0 0 114px;
+    margin: 220px auto 0 auto;
     padding-bottom: 28px;
     border-bottom: 3px solid #9E9E9E;
 }
 
 .game {
-    min-width: 1080px;
-    width: 1268px;
-    height: 530px;
-    margin: 58px 86px 0 86px;
+    width: 1000px;
+    height: 480px;
+    margin: 58px auto 0;
     background-color: rgba( 249, 249, 249, 0.4 );
+    cursor: pointer;
 }
 
 .game img {
-    width: 633px;
-    height: 395px;
+    width: 510px;
+    height: 350px;
     box-shadow: 20px 20px 5px rgba( 0, 0, 0, 0.7 );
-    margin: 58px 36px 58px 68px;
+    margin: 65px 36px 65px 58px;
     float: left;
 }
 
@@ -134,22 +133,22 @@ main {
   }
 
 .game_text {
-    width: 480px;
+    width: 320px;
     float: right;
-    margin: 112px 40px 0 0;
+    margin: 112px 43px 0 0;
 }
 
 .game_name {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 32px;
     color: #FFF;
     line-height: 120%; 
 }
 
 .game_contents {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #FFF;
     margin-top: 25px;
