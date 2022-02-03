@@ -50,3 +50,115 @@ table {
     font-weight: normal;
     font-style: normal;
 }
+body{
+	min-width: 1080px;
+}
+/*헤더*/
+header{
+	height:170px;
+	background-color: rgb(211, 211, 211);
+}
+
+/*컨텐츠*/
+section{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	overflow:hidden;
+}
+section::after {
+	width: 100%;
+	height: 100%;
+	content: "";
+	background: url("../img/p1.png");
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	opacity: 0.5;
+  }
+
+.left, .center, .right{
+	position: absolute;
+	display: inline-block;
+	width: 600px;
+	height: 300px;
+	background-color: rgb(197, 197, 197);
+}
+
+.center{
+	top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.center_img{
+	opacity: 1;
+	width: 100%;
+}
+
+.left{
+	top: 40%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.right{
+	top: 40%;
+    right: 0%;
+    transform: translate(50%, -50%);
+}
+
+/*슬라이더 텍스트*/
+.carousel_info{
+	position: absolute;
+	width: 100%;
+	bottom: 0%;
+	height: 120px;
+}
+.carousel_circle{
+	display: flex;
+	width: 100%;
+	height: 20px;
+	justify-content: center;
+}
+
+.left_triangle {
+	width: 0px;
+	height: 0px;
+	margin: 0 5px;
+	border-right: 18px solid #fff;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+  }
+  .right_triangle {
+	width: 0px;
+	height: 0px;
+	margin: 0 5px;
+	border-left: 18px solid #fff;
+	border-top: 9px solid transparent;
+	border-bottom: 9px solid transparent;
+  }
+.circle{
+	clear:both;
+	display: block;
+	z-index: 10;
+	width: 15px;
+	margin: 0 5px;
+	height: 15px;
+	background-color: #fff;
+	border-radius: 50px;
+}
+
+.active_circle{
+	background-color: rgb(255, 0, 0);
+}
+
+.carousel_text{
+	font-family: 'Vitro_core';
+	margin-top: 30px;
+	text-align: center;
+	color: #fff;
+	font-size: 32px;
+}
