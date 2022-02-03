@@ -12,24 +12,36 @@
 <body>
     <header></header>
     <section>
-        <div class = "left"></div>
-        <div class = "center">
-            <img class = "center_img" src="./img/p1.png" alt="캐러셀이미지">
+        <div class = "main_contents">
+            <div class = "card3">
+                <img class = "center_img" src="./img/p3.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card4">
+                <img class = "center_img" src="./img/p4.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card1">
+                <img class = "center_img" src="./img/p1.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card2">
+                <img class = "center_img" src="./img/p2.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card3">
+                <img class = "center_img" src="./img/p3.png" alt="캐러셀이미지">
+            </div>
         </div>
-        <div class = "right"></div>
         <div class = "carousel_info">
             <div class = "carousel_circle">
-                <div class="left_triangle"></div>
-                <div class = "circle active_circle"></div>
-                <div class = "circle"></div>
-                <div class = "circle"></div>
-                <div class = "circle"></div>
-                <div class="right_triangle"></div>
+                <div class="left_triangle" onclick = "previous()"></div>
+                <div class = "circle c1 active_circle"></div>
+                <div class = "circle c2"></div>
+                <div class = "circle c3"></div>
+                <div class = "circle c4"></div>
+                <div class="right_triangle" onclick = "next()"></div>
             </div>
             <div class = "carousel_text">
                 페이즈 1
-            </div>
         </div>
+    </div>
     </section>
     <script src = "./js/series.js"></script>
 </body>

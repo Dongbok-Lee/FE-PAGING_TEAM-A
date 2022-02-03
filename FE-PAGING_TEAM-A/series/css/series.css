@@ -65,49 +65,75 @@ section{
 	height: 100vh;
 	width: 100%;
 	overflow:hidden;
+	background-image : url("../img/back1.png");
+	background-size: cover;
+	background-position: center center;
 }
-section::after {
+/* section::after {
 	width: 100%;
 	height: 100%;
 	content: "";
 	background: url("../img/p1.png");
 	background-size: cover;
+	opacity: 0.5;
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: -1;
-	opacity: 0.5;
-  }
+	
+  } */
 
-.left, .center, .right{
+.main_contents > div:nth-child(-n+5){
 	position: absolute;
 	display: inline-block;
 	width: 600px;
 	height: 300px;
+	cursor: pointer;
 	background-color: rgb(197, 197, 197);
 }
 
-.center{
+.main_contents > div:nth-child(3){
+	transition-duration: 1s;
+	width: 650px;
+	height: 350px;
 	top: 40%;
     left: 50%;
     transform: translate(-50%, -40%);
 }
 
 .center_img{
-	opacity: 1;
 	width: 100%;
+	height: 100%;
 }
 
-.left{
+.main_contents > div:nth-child(1){
+	transition-duration: 1s;
 	top: 40%;
-    left: 0%;
+    left: -50%;
     transform: translate(-50%, -50%);
 }
 
-.right{
+.main_contents > div:nth-child(2){
+	transition-duration: 1s;
 	top: 40%;
-    right: 0%;
-    transform: translate(50%, -50%);
+    left: 0%;
+    transform: translate(-50%, -50%);
+	filter: brightness(50%);
+}
+
+.main_contents > div:nth-child(4){
+	transition-duration: 1s;
+	top: 40%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+	filter: brightness(50%);
+}
+
+.main_contents > div:nth-child(5){
+	transition-duration: 1s;
+	top: 40%;
+    left: 150%;
+    transform: translate(-50%, -50%);
 }
 
 /*슬라이더 텍스트*/
@@ -131,6 +157,7 @@ section::after {
 	border-right: 18px solid #fff;
 	border-top: 9px solid transparent;
 	border-bottom: 9px solid transparent;
+	cursor: pointer;
   }
   .right_triangle {
 	width: 0px;
@@ -139,6 +166,7 @@ section::after {
 	border-left: 18px solid #fff;
 	border-top: 9px solid transparent;
 	border-bottom: 9px solid transparent;
+	cursor: pointer;
   }
 .circle{
 	clear:both;
