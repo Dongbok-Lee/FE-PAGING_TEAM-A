@@ -40,6 +40,7 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   let $movies = document.createElement('div');
   $divide.classList.add('divide');
   $movies.classList.add('movies');
+  $movies.classList.add(`${kind}`);
   $containter.appendChild($divide);
   $containter.appendChild($movies);
   // 타이틀 넣기
@@ -62,11 +63,14 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   // 영화 or 드라마 이미지들 넣기
   for (let i = 0; i < length; i++) {
     let movies_img = document.createElement('img');
+    let movies_img_name = document.createElement('div');
     let movies_div = document.createElement('div');
     let imgSrc = `./img/movie/movie_${data[kind][i].source}.jpg`;
     movies_img.src = imgSrc;
+    movies_img_name.textContent = `${data[kind][i].name}`;
+    movies_img_name.classList.add('movies_img_name');
 
-    movies_img.addEventListener('click', () => {
+    movies_img.addEventListener('dblclick', () => {
       newImg.src = imgSrc;
       $modal_img.appendChild(newImg);
       if (kind == 'released') {
@@ -124,13 +128,14 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
         $modal_content.appendChild(newPlot);
       }
 
+      // 화면 스크롤 했을때 무조건 가운데에 모달 보이는 기능
       $modal.style.top = `${($modal.getBoundingClientRect().top) / 2 + window.scrollY}px`;
-      console.log($modal.style.top);
       $modal.style.display = 'flex';
       $body.classList.add('stop-scroll');
     });
 
-    movies_div.appendChild(movies_img);
+    movies_div.append(movies_img);
+    movies_div.append(movies_img_name);
     $movies.appendChild(movies_div);
   }
 
@@ -149,6 +154,7 @@ function appendMovie(kind, length) { // 영화, 드라마 슬라이더 만드는
   $movies.addEventListener('mouseup', () => {
     isMouseDown = false;
     $movies.classList.remove('active');
+
   });
   $movies.addEventListener('mousemove', (e) => {
     if (!isMouseDown) return;
