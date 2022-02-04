@@ -90,10 +90,11 @@ section{
 	height: 300px;
 	cursor: pointer;
 	background-color: rgb(197, 197, 197);
+	transition-duration: 0.7s;
+	transition-timing-function:ease-in-out;
 }
 
 .main_contents > div:nth-child(3){
-	transition-duration: 1s;
 	width: 650px;
 	height: 350px;
 	top: 40%;
@@ -107,14 +108,12 @@ section{
 }
 
 .main_contents > div:nth-child(1){
-	transition-duration: 1s;
 	top: 40%;
     left: -50%;
     transform: translate(-50%, -50%);
 }
 
 .main_contents > div:nth-child(2){
-	transition-duration: 1s;
 	top: 40%;
     left: 0%;
     transform: translate(-50%, -50%);
@@ -122,7 +121,6 @@ section{
 }
 
 .main_contents > div:nth-child(4){
-	transition-duration: 1s;
 	top: 40%;
     left: 100%;
     transform: translate(-50%, -50%);
@@ -130,7 +128,6 @@ section{
 }
 
 .main_contents > div:nth-child(5){
-	transition-duration: 1s;
 	top: 40%;
     left: 150%;
     transform: translate(-50%, -50%);
