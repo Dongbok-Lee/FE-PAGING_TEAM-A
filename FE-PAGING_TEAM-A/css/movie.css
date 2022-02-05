@@ -67,6 +67,7 @@ body {
   width: 200px;
   text-align: center;
   margin: 0 auto;
+  font-weight: 800;
 }
 
 #modal.modal_overlay {
@@ -88,7 +89,7 @@ body {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 10px;
   /* border: 1px solid rgba(255, 255, 255, 0.18); */
-  width: 900px;
+  width: 800px;
   height: auto;
   display: block;
   align-items: center;
@@ -100,10 +101,10 @@ body {
 }
 
 #modal .modal_area {
-  font-size: 17px;
+  font-size: 13px;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #modal .modal_area ::-webkit-scrollbar {
@@ -133,17 +134,14 @@ body {
   cursor: pointer;
 }
 
-#modal .close_area button {
-  width: 25px;
-  height: 20px;
+#modal button {
   border-radius: 10px;
   background: white;
   border: #9EA4AA;
-  margin-bottom: 4px;
   cursor: pointer;
 }
 
-#modal .close_area button:hover {
+#modal button:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
 }
 
