@@ -53,9 +53,8 @@ header{
 
 /*페이즈 설명*/
 .faze_main_contents{
-    margin: 60px auto 0;
+    margin: 60px auto 100px;
     width: 1000px;
-    height: 4000px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -153,7 +152,7 @@ header{
 
 .movie_rate > span{
     font-family: Noto Sans KR;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
 }
 

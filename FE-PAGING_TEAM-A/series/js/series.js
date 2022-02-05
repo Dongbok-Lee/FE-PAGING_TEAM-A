@@ -23,10 +23,10 @@ const slide_next_card = () => {
     $('.main_contents > div:nth-child(1)').remove();
 
     if(index > 1){
-        var card =  '<div class = "'+"card" + (index-1) +'"><img class = "center_img" src="./img/p'+(index-1)+'.png" alt="캐러셀이미지"></div>';
+        var card =  '<div class = "'+"card" + (index-1) +'"OnClick="location.href =\'./faze_'+ (index-1) +'.html\'"><img class = "center_img" src="./img/p'+(index-1)+'.png" alt="캐러셀이미지"></div>';
         $('.main_contents').append(card);
     }else{
-        var card =  '<div class = "'+"card" + (index+3) +'"><img class = "center_img" src="./img/p'+(index+3)+'.png" alt="캐러셀이미지"></div>';
+        var card =  '<div class = "'+"card" + (index+3) +'"OnClick="location.href =\'./faze_'+ (index+3) +'.html\'"><img class = "center_img" src="./img/p'+(index+3)+'.png" alt="캐러셀이미지"></div>';
         $('.main_contents').append(card);
     }
     active_next_circle();
@@ -47,10 +47,10 @@ const slide_previous_card = () => {
         $('.main_contents > div:nth-child(5)').remove();
 
     if(index > 3){
-        var card =  '<div class = "'+"card" + (index-3) +'"><img class = "center_img" src="./img/p'+(index-3)+'.png" alt="캐러셀이미지"></div>';
+        var card =  '<div class = "'+"card" + (index-3) +'"OnClick="location.href =\'./faze_'+ (index-3) +'.html\'"><img class = "center_img" src="./img/p'+(index-3)+'.png" alt="캐러셀이미지"></div>';
         $('.main_contents').prepend(card);
     }else{
-        var card =  '<div class = "'+"card" + (index+1) +'"><img class = "center_img" src="./img/p'+(index+1)+'.png" alt="캐러셀이미지"></div>';
+        var card =  '<div class = "'+"card" + (index+1) +'"OnClick="location.href =\'./faze_'+ (index+1) +'.html\'"><img class = "center_img" src="./img/p'+(index+1)+'.png" alt="캐러셀이미지"></div>';
         $('.main_contents').prepend(card);
     }
     active_previous_circle();
