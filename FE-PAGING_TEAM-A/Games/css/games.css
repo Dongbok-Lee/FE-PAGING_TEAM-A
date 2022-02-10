@@ -54,8 +54,12 @@ table {
 
 /* 전체*/
 body {
-  min-width: 1080px; 
-  font-family: "Vitro_core";
+    min-width: 1080px; 
+    font-family: "Vitro_core";
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none
 }
 
 /* 배경 */
