@@ -56,48 +56,151 @@ table {
 body {
     min-width: 1080px; 
     font-family: "Vitro_core";
-  }
-  
-  /* 배경 */
-  .bg {
-      background-image: url("../img/퀴즈시작.jpg");
-      background-position: center;
-      background-size: cover;
-  }
-  
-  /* 헤더 */
-  header {
-    height: 170px;
-    background-color: #fff;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none
+
   }
 
-  /* 메인 */
+  /* 시작화면 배경 */
+  .bg_start {
+    background-image: url("../img/퀴즈시작.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* 헤더 */
+header {
+  height: 170px;
+  background-color: #fff;
+}
+
+/* 시작화면 */
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quiz_title {
+  color: #fff;
+  font-size: 64px;
+}
+
+.btn {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  margin-top: 65px;
+  font-size: 64px;
+  vertical-align: middle;
+  width: 340px;
+  height: 100px;
+  cursor: pointer;
+  background:rgba( 249, 249, 249, 0.7 );
+	color:#FFF;
+  border-radius: 50px;
+  border-color: #00ff0000;
+  text-decoration:none;
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+
+
+}
+
+.btn:hover {
+  width: 350px;
+  height: 110px;
+  color: #B372E7;
+  background-color: rgba(64, 64, 64, 0.7);
+	transition-property:all;
+	transition-duration:0.3s;
+	transition-timing-function:ease-in-out;
+	transition-delay:0;
+}
+
+
+  /* 게임화면 배경 */
+  .bg_game {
+      background-image: url("../img/퀴즈진행.jpg");
+      background-position: center;
+      background-size: cover;
+      min-height:620px;
+  }
+
+  /* 게임화면 */
   main {
+    height: 100vh;
+  }
+
+  .questionbox {
+    position: absolute;
+    float: left;
+}
+
+.question {
+    display: inline-block;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    width: 1000px;
+    color: #fff;
+    font-size: 42px;
+    margin: 80px 0 0 80px;
+    padding-bottom: 40px;
+    border-bottom: solid 5px #B4B4B4;
+    line-height: 120%;
+}
+
+.option {
+    display: block;
+    height: 60px;
+    margin: 40px 0 0 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 33px;
+    color: #fff;
+    background-color: #00ff0000;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .option:hover {
+    color: #C275E3;
+  }
+
+  /* 결과 화면 */
+
+ .bg_over {
+    background-image: url("../img/퀴즈끝.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .resultbox {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    color: #fff;
   }
 
-  .quiz_title {
-    color: #fff;
-    font-size: 64px;
+  .result {
+    font-size: 50px;
   }
-  
-  .btn {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: bold;
-    margin-top: 65px;
-    font-size: 64px;
-    vertical-align: middle;
-    color: #fff;
-    background-color: rgba( 249, 249, 249, 0.7 );
-    border-radius: 50px;
-    border-color: #00ff0000;
-    width: 340px;
-    height: 100px;
-    cursor: pointer;
+
+  .result_text {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .result_count {
+    margin-top: 20px;
+    font-size: 30px;
   }
