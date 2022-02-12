@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/series.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Marvel Cinematic Universe</title>
+</head>
+<body>
+    <header>
+        <div  class="mainpage_nav">
+                <div class = "nav_line">
+                    <ul class = "nav_list">
+                        <li class="mainpage_nav_li_left"><a href="#">CHARACTERS</a></li>
+                        <li class="mainpage_nav_li_left"><a href="#">SERIES</a></li>
+                        <li class="mainpage_nav_li_left"><a href="#">NEWS</a></li>
+                    </ul>
+                </div>
+
+        </div>
+        <div id="mainpage_logo">
+            <a href="mainpage2.html"><img src="img/logo.png" ></a>
+        </div>
+
+        <div class="mainpage_nav">
+            <div class = "nav_line">
+                <ul class = "nav_list">
+                    <li class="mainpage_nav_li_right"><a href="#">GAMES</a></li>
+                    <li class="mainpage_nav_li_right"><a href="#">MOVIES/DRAMA</a></li>
+                </ul>
+            </div>
+    </header>
+    <section>
+        <div class = "main_contents">
+            <div class = "card3" onclick = "location.href = './faze_3.html'">
+                <img class = "center_img" src="./img/p3.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card4" onclick = "location.href = './faze_4.html'">
+                <img class = "center_img" src="./img/p4.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card1" onclick = "location.href = './faze_1.html'">
+                <img class = "center_img" src="./img/p1.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card2" onclick = "location.href = './faze_2.html'">
+                <img class = "center_img" src="./img/p2.png" alt="캐러셀이미지">
+            </div>
+            <div class = "card3" onclick = "location.href = './faze_3.html'">
+                <img class = "center_img" src="./img/p3.png" alt="캐러셀이미지">
+            </div>
+        </div>
+        <div class = "carousel_info">
+            <div class = "carousel_circle">
+                <div class="left_triangle" onclick = "previous()"></div>
+                <div class = "circle c1 active_circle"></div>
+                <div class = "circle c2"></div>
+                <div class = "circle c3"></div>
+                <div class = "circle c4"></div>
+                <div class="right_triangle" onclick = "next()"></div>
+            </div>
+            <div class = "carousel_text">
+                페이즈 1
+        </div>
+    </div>
+    </section>
+    <script src = "./js/series.js"></script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/*초기화 코드*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/*폰트*/
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+/*해상도*/
+body{
+    min-width: 1080px;
+}
+
+/*헤더*/
+header{
+    width: 100%;
+    height: 170px;
+}
+
+/*최상단 페이즈 이미지*/
+
+.faze_main_image{
+    width: 100%;
+    height: 400px;
+}
+
+/*페이즈 설명*/
+.faze_main_contents{
+    margin: 60px auto 100px;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faze_sub_title{
+    font-family: Vitro_core;
+    font-size: 20px;
+    width: 100%;
+}
+
+.faze_main_title{
+    width: 100%;
+    font-family: Vitro_core;
+    font-size: 48px;
+}
+
+.faze_main_title::after{
+    content: "";
+    display: block;
+    width: 800px;
+    border-bottom: solid 7px rgb(189, 189, 189);
+    margin-top: 20px;
+}
+
+.faze_movie_images{
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 800px;
+    background-color: rgb(224, 224, 224);
+}
+
+.faze_movie_images > img{
+    width: 150px;
+    height: 200px;
+    margin: 40px 50px;
+}
+
+.faze_explain{
+    margin-top: 50px;
+    width: 850px;
+    font-size: 18px;
+    font-family: Noto Sans KR;
+}
+
+/*영화, 스토리 소개*/
+.faze_story_title{
+    margin-top: 100px;
+    width: 100%;
+    font-family: Vitro_core;
+    font-size: 48px;
+}
+.faze_story_title::after{
+    content: "";
+    display: block;
+    width: 800px;
+    border-bottom: solid 7px rgb(189, 189, 189);
+    margin-top: 20px;
+}
+
+.movie_card{
+    margin-top: 80px;
+    display: flex;
+    width: 950px;
+    height: 350px;
+    background-color: rgb(223, 223, 223);
+}
+/*영화 카드*/
+.movie_info{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.movie_name{
+    font-family: Vitro_core;
+    font-size: 32px;
+    text-indent: 10px;
+}
+
+.movie_name::after{
+    content: "";
+    display: block;
+    width: 500px;
+    border-bottom: solid 4px #fff;
+    margin-top: 5px;
+}
+
+.movie_rate{
+    width: 250px;
+    margin-left: 20px;
+}
+
+.movie_rate > span{
+    font-family: Noto Sans KR;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.star{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.story_info{
+    font-family: Noto Sans KR;
+    font-size: 18px;
+    margin: 0 10px 10px;
+    height:220px;
+}
