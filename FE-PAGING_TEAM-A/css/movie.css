@@ -58,6 +58,11 @@ body {
   margin: 20px;
   cursor: pointer;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-out;
+}
+
+.movies img:hover {
+  transform: translateY(-10px);
 }
 
 .movies .name {
