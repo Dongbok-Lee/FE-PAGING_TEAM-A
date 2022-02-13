@@ -1,63 +1,64 @@
-header{
-    height: 170px;
-    width: 100%;
-    background: #3C3C3C;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+header {
+  height: 170px;
+  width: 100%;
+  background: #3c3c3c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.mainpage_nav{
-	width: 35%;
-	margin-top: 110px;
-	/* display: flex;
+.mainpage_nav {
+  width: 35%;
+  margin-top: 110px;
+  /* display: flex;
 	flex-direction: column; */
 }
 /* hr태그보다 ::after 사용해서 라인 넣는게 깔끔할 듯
 너비를 전체너비의 퍼센트로 주어서 해상도마다 동적으로 할당되어 깨지지 않게 */
-.nav_list{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+.nav_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 /*.nav_list 추가 리스트 inline-block 정렬에서 -> flex정렬로 변경 */
-.nav_line{
-	position: relative;
+.nav_line {
+  position: relative;
 }
-.nav_list::before{
-	top: -20px;
-	position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: solid 3px #fff;
+.nav_list::before {
+  top: -20px;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: solid 3px #fff;
 }
 
 .mainpage_nav ul li {
-	display: inline-block;
-	font-family: mono;
-	font-size: 28.4335px;
-	line-height: 39px;
-	letter-spacing: -0.02em;
-	/* padding-left: 50px;
+  display: inline-block;
+  font-family: mono;
+  font-size: 28.4335px;
+  line-height: 39px;
+  letter-spacing: -0.02em;
+  /* padding-left: 50px;
 	padding-right: 50px; */
 }
 /* flex 정렬 했으므로 패딩 불필요 */
 /*1080해상도에서 글씨깨질 수도 있어서 사이즈다운*/
 
 .mainpage_nav ul li a {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
-.mainpage_nav ul li:hover a  {    /*nav, logo 부분 hover 기능 추가*/
-	font-size: 33px;
-	color: #ff4242;
+.mainpage_nav ul li:hover a {
+  /*nav, logo 부분 hover 기능 추가*/
+  font-size: 33px;
+  color: #ff4242;
 }
 
-#mainpage_logo a img{ 
-	height:136px;
+#mainpage_logo a img {
+  height: 136px;
 }
 
 #mainpage_logo:hover a img {
-	height: 141px;	
+  height: 141px;
 }
