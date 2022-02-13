@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'mono';
+    src: url('../fonts/Monologue\ DEMO.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 header{
     height: 170px;
     width: 100%;
