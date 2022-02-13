@@ -1,0 +1,136 @@
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: 'mono';
+    src: url('../fonts/Monologue\ DEMO.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	min-width: 1080px;
+}
+
+header{
+    height: 170px;
+    width: 100%;
+    background: #3C3C3C;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mainpage_nav{
+	width: 35%;
+	margin-top: 110px;
+}
+.nav_list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav_line{
+	position: relative;
+}
+.nav_list::before{
+	top: -20px;
+	position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: solid 3px #fff;
+}
+
+.mainpage_nav ul li {
+	display: inline-block;
+	font-family: mono;
+	font-size: 28.4335px;
+	line-height: 39px;
+	letter-spacing: -0.02em;
+}
+.mainpage_nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+.mainpage_nav ul li:hover a  { 
+	font-size: 33px;
+	color: #ff4242;
+}
+#mainpage_logo a img{ 
+	height:136px;
+}
+#mainpage_logo:hover a img {
+	height: 141px;
+	
+}
+
+
+
+*{margin:0;padding:0;}
+ul,li{list-style:none;}
+.slide{height:100vh;overflow:hidden;}
+.slide ul{width:calc(100% * 5);display:flex;animation:slide 25s infinite;} /* slide를 8초동안 진행하며 무한반복 함 */
+.slide li{width:calc(100% / 5);height:100vh;}
+.slide li:nth-child(1){background:#3C3C3C;}
+.slide li:nth-child(2){background:#3C3C3C;}
+.slide li:nth-child(3){background:#3C3C3C;}
+.slide li:nth-child(4){background:#3C3C3C;}
+.slide li:nth-child(5){background:#3C3C3C;}
+
+
+@keyframes slide {
+    0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+    10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+    20% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+    30% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+    40% {margin-left:-200%;}
+    50% {margin-left:-200%;}
+    60% {margin-left:-300%;}
+    70% {margin-left:-300%;}
+    80% {margin-left:-400%;}
+    90% {margin-left:-400%;}
+    100% {margin-left:0;}
+  }
+
+
+
+#mainpage_img{
+	position: absolute;
+	top:50px;
+	left:150px;
+
+}
+
+/*슬라이드 이미지*/
+.slide_img_list > li > img{
+	width: 100%;
+	image-rendering: -webkit-optimize-contrast;       
+	transform: translateZ(0);     /*img 좀 더 선명하게..*/
+	height : 100vh;
+}
+
+.nav_list .current{
+	font-size: 33px;
+	color: #ff4242;
+}
+
