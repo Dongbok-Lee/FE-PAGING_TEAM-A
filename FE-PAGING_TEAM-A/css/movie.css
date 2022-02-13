@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Vitro_core';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+  font-family: "Vitro_core";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,11 +12,11 @@ html {
 
 body {
   min-width: 1200px;
-  font-family: 'Noto Sans kr';
+  font-family: "Noto Sans kr";
 }
 
 .vitro {
-  font-family: 'Vitro_core';
+  font-family: "Vitro_core";
 }
 
 ::-webkit-scrollbar {
@@ -101,7 +102,7 @@ body {
 }
 
 #modal .modal_area {
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   margin-bottom: 15px;
@@ -137,7 +138,7 @@ body {
 #modal button {
   border-radius: 10px;
   background: white;
-  border: #9EA4AA;
+  border: #9ea4aa;
   cursor: pointer;
 }
 
@@ -158,7 +159,7 @@ body {
 #modal .modal_content div {
   padding: 8px;
   line-height: 1.5em;
-  border-bottom: 1px solid #C9CDDE;
+  border-bottom: 1px solid #c9cdde;
 }
 
 #modal .modal_scene {
