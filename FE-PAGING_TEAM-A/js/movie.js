@@ -26,7 +26,6 @@ let data = JSON.parse(JSON.stringify(Params));
 let releasedLength = Object.keys(data["released"]).length;
 let upcomingLength = Object.keys(data["upcoming"]).length;
 let dramaLength = Object.keys(data["drama"]).length;
-
 // 드래그 이벤트 관련 변수
 let isMouseDown = false;
 let startX, scrollLeft;
