@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.ico" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+      @import url(./css/header.css);
+      @import url(./css/movie.css);
+      @import url(./css/reset.css);
+    </style>
+    <title>Marvel Cinematic Universe</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="mainpage_nav">
+        <div class="nav_line">
+          <ul class="nav_list">
+            <li class="mainpage_nav_li_left"><a href="#">CHARACTERS</a></li>
+            <li class="mainpage_nav_li_left"><a href="#">SERIES</a></li>
+            <li class="mainpage_nav_li_left"><a href="#">NEWS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="mainpage_logo">
+        <a href="mainpage2.html"><img src="img/logo.png" /></a>
+      </div>
+
+      <div class="mainpage_nav">
+        <div class="nav_line">
+          <ul class="nav_list">
+            <li class="mainpage_nav_li_right"><a href="#">GAMES</a></li>
+            <li class="mainpage_nav_li_right"><a href="#">MOVIES/DRAMA</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="container"></section>
+
+    <div id="modal" class="modal_overlay">
+      <div class="modal_window">
+        <div class="close_area"><button>X</button></div>
+        <div class="modal_area">
+          <div class="modal_img"></div>
+          <div class="modal_content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./data/movie.json"></script>
+    <script src="./js/movie.js"></script>
+  </body>
+</html>

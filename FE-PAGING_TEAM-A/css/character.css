@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Vitro_core";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 1080px;
+  font-family: "Noto Sans kr";
+}
+
+.vitro {
+  font-family: "Vitro_core";
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.header {
+  height: 170px;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.characters {
+  /* border: 1px solid blue; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1200px;
+  height: 800px;
+  overflow: scroll;
+  padding: 20px;
+}
+
+.characters::-webkit-scrollbar {
+  display: none;
+}
+
+.characters img {
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+.characters .name {
+  text-align: center;
+}
+
+#modal.modal_overlay {
+  width: 100%;
+  height: 970px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#modal .modal_window {
+  border: 1px solid rgba(255, 46, 46, 0.555);
+  background: white;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 10px;
+  /* border: 1px solid rgba(255, 255, 255, 0.18); */
+  width: 700px;
+  height: auto;
+  display: block;
+  align-items: center;
+  top: -100px;
+  padding: 10px;
+  overflow: scroll;
+}
+
+#modal .modal_area {
+  font-size: 14px;
+  display: flex;
+}
+
+#modal .modal_area ::-webkit-scrollbar {
+  display: none;
+}
+
+#modal .modal_window ::-webkit-scrollbar {
+  display: none;
+}
+
+#modal .modal_img {
+  margin: 0 auto;
+  width: 250px;
+  height: 350px;
+}
+
+#modal .modal_img img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+#modal .close_area {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+#modal .close_area button {
+  width: 25px;
+  height: 20px;
+  border-radius: 10px;
+  background: white;
+  border: #9ea4aa;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+#modal .close_area button:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
+
+#modal .modal_content {
+  width: 400px;
+  height: 300px;
+  margin-right: 20px;
+}
+
+#modal .modal_content div {
+  padding: 8px;
+  line-height: 1.5em;
+  border-bottom: 1px solid #c9cdde;
+}
+
+#modal .modal_scene {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
+}
+
+#modal .modal_scene img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+}
