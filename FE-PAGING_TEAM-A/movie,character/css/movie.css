@@ -40,7 +40,7 @@ body {
   /* border: 1px solid blue; */
   display: flex;
   flex-wrap: nowrap;
-  width: 1180px;
+  width: 1080px;
   height: 360px;
   overflow: scroll;
   padding: 20px;
