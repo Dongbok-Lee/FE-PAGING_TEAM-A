@@ -10,16 +10,67 @@
   </head>
 
   <body>
-    <header></header>
-    <div class="bg">
-        <main>
-            <h1 class="worldcup_title">마블 시네마틱 유니버스 캐릭터<br>이상형 월드컵</h1>
-            <button type="button" onclick="#" class="btn">START</button>
-        </main>
-    </div>
-    <script>
+    <header>
+      <div  class="mainpage_nav">
+              <div class = "nav_line">
+                  <ul class = "nav_list">
+                      <li class="mainpage_nav_li_left"><a href="#">CHARACTERS</a></li>
+                      <li class="mainpage_nav_li_left"><a href="#">SERIES</a></li>
+                      <li class="mainpage_nav_li_left"><a href="#">NEWS</a></li>
+                  </ul>
+              </div>
 
-    </script>
+      </div>
+      <div id="mainpage_logo">
+          <a href="mainpage2.html"><img src="img/logo.png" ></a>
+      </div>
+
+      <div class="mainpage_nav">
+          <div class = "nav_line">
+              <ul class = "nav_list">
+                  <li class="mainpage_nav_li_right"><a class="current" href="#">GAMES</a></li>
+                  <li class="mainpage_nav_li_right"><a href="#">MOVIES/DRAMA</a></li>
+              </ul>
+          </div>
+  </header>
+
+    <div class="bg_start" id="start">
+        <section>
+            <h1 class="worldcup_title">마블 시네마틱 유니버스 캐릭터<br>이상형 월드컵</h1>
+            <button type="button" onclick="init()" class="btn">START</button>
+        </section>
+    </div>
+    
+    <div class="bg_game" id="game">
+        <div class = "worldcup_contents">
+          <h1 class = "title_text">마블 시네마틱 유니버스 캐릭터 이상형 월드컵 <span class ="round">1/32</span></h1>
+          <div class = "battle">
+            <div class="img1" onclick="next_battle(first_img, second_img)">
+              <img id = "img1" alt="1">
+            </div>
+            <div class="img2" onclick="next_battle(second_img, first_img)">
+              <img id="img2" alt="2">
+            </div>
+          </div>
+          <div class = "hero_name">
+            <h2 class="hero1"></h2>
+            <h2 class="hero2"></h2>
+          </div>
+        </div>
+    </div>
+
+    <div class="bg_over" id="over">
+      <div class="resultbox">
+        <h2 class = "result"></h2>
+        <h2 class= "result_hero"></h2>
+        <img class = "result_img" alt=""></h2>
+      </div>
+    </div>
+
+
+
+
+    <script src="./js/worldcup.js"></script>
   </body>
 
 </html>

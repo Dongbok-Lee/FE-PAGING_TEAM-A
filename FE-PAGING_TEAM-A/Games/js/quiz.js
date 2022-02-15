@@ -53,14 +53,20 @@ const result = (correct) => {
     document.getElementById('over').style.display = 'block';
     
     if(correct <= 5){
-        document.querySelector('.result').innerText = '당신은 마블 찐덕후입니다. '
-        document.querySelector('.result_text').innerText = '진정한 마블 덕후시군요! '
-        document.querySelector('.result_count').innerText = '맞힌 개수 : ' + correct + '개'
+        document.querySelector('.result').innerText = '당신은 마알못입니다.'
+        document.querySelector('.result_text').innerText = '마블 시네마틱 유니버스에 관심이 없으시군요.. '
+        document.querySelector('.result_count').innerText = '맞힌 개수: ' + correct + '개'
     } else if(correct <= 10){
-        document.querySelector('.result').innerText = '맞힌 개수: ' + correct + '개'
+        document.querySelector('.result').innerText = '당신은 마블 일반인입니다.'
+        document.querySelector('.result_text').innerText = '마블 시네마틱 유니버스에 조금 관심이 있으시군요!'
+        document.querySelector('.result_count').innerText = '맞힌 개수: ' + correct + '개'
     } else if(correct <= 17){
-        document.querySelector('.result').innerText = '맞힌 개수: ' + correct + '개'
+        document.querySelector('.result').innerText = '당신은 마블 덕후입니다.'
+        document.querySelector('.result_text').innerText = '마블 시네마틱 유니버스에 관심이 많으시군요! '
+        document.querySelector('.result_count').innerText = '맞힌 개수: ' + correct + '개'
     } else {
-        document.querySelector('.result').innerText = '맞힌 개수: ' + correct + '개'
+        document.querySelector('.result').innerText = '당신은 마블 찐덕후입니다.'
+        document.querySelector('.result_text').innerText = '진정한 마블 시네마틱 유니버스 덕후시군요! '
+        document.querySelector('.result_count').innerText = '맞힌 개수: ' + correct + '개'
     }
 }

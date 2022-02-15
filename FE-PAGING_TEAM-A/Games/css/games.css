@@ -62,17 +62,74 @@ body {
     user-select:none
 }
 
+/* 헤더 */
+header{
+    height: 170px;
+    width: 100%;
+    background: #3C3C3C;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mainpage_nav{
+	width: 35%;
+	margin-top: 110px;
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.nav_list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav_line{
+	position: relative;
+}
+
+.nav_list::before{
+	top: -20px;
+	position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: solid 3px #fff;
+}
+
+.mainpage_nav ul li {
+	display: inline-block;
+	font-family: mono;
+	font-size: 28.4335px;
+	line-height: 39px;
+	letter-spacing: -0.02em;
+	/* padding-left: 50px;
+	padding-right: 50px; */
+}
+
+.mainpage_nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+.mainpage_nav ul li:hover a  {   
+	font-size: 33px;
+	color: #ff4242;
+}
+
+#mainpage_logo a img{ 
+	height:136px;
+}
+
+#mainpage_logo:hover a img {
+	height: 141px;	
+}
+
 /* 배경 */
 .bg {
     background-image: url("../img/main.jpg");
     background-position: center;
     background-size: cover;
-}
-
-/* 헤더 */
-header {
-  height: 170px;
-  background-color: #fff;
 }
 
 /* Games */
