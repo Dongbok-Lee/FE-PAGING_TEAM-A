@@ -125,6 +125,7 @@ main{
 .main_card img{
     width: 900px;
     height: 400px;
+    box-shadow: 5px 5px 5px rgb(122, 122, 122);
 }
 .main_news_text{
     width: 700px;
@@ -159,6 +160,7 @@ main{
     margin-top: 20px;
     width: 430px;
     height: 250px;
+    box-shadow: 5px 5px 5px rgb(122, 122, 122);
 }
 .sub_card{
     position: relative;
@@ -178,6 +180,6 @@ main{
     text-decoration: underline;
 }
 .sub_card:hover{
-    transform:scale(1.03); /* 마우스 오버시 이미지 크기를 1.1 배만큼 확대시킨다. */
+    transform:scale(1.03); 
     transition: transform .35s;  
 }

@@ -90,10 +90,9 @@ section{
 	height: 300px;
 	cursor: pointer;
 	background-color: rgb(197, 197, 197);
-	transition-duration: 0.7s;
+	transition-duration: 1s;
 	transition-timing-function:ease-in-out;
 }
-
 .main_contents > div:nth-child(3){
 	width: 650px;
 	height: 350px;
@@ -105,6 +104,14 @@ section{
 .center_img{
 	width: 100%;
 	height: 100%;
+	transition: transform 1s;
+	box-shadow: 5px 5px 5px rgb(0, 0, 0);
+}
+.center_img:hover{
+	width: 100%;
+	height: 100%;
+    transform:scale(1.03); 
+    transition: transform 1s;  
 }
 
 .main_contents > div:nth-child(1){
@@ -186,4 +193,22 @@ section{
 	text-align: center;
 	color: #fff;
 	font-size: 32px;
+}
+
+.right_arrow{
+	position: absolute;
+	right: 0;
+	height: 100vh;
+	width: 300px;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.left_arrow{
+	position: absolute;
+	left: 0;
+	height: 100vh;
+	width: 300px;
+	z-index: 10;
+	cursor: pointer;
 }
