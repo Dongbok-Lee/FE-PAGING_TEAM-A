@@ -1,6 +1,6 @@
 
 let img_round_arr = [];
-let hero_text_arr = ['스파이더맨', '헐크' ,'캡틴아메리카', '아이언맨', '토르', '블랙팬서' ,'그루트' ,'블랙위도우' ,'호크아이', '로켓라쿤', '앤트맨', '스타로드', '가모라', '닥터스트레인지', '팔콘', '드랙스', '워머신', '로키' ,'윈터솔져' ,'오코예' ,'타노스' ,'발키리' ,'슈리', '비전',  '스칼렛위치' ,'헤임달' ,'맨티스' ,'웡' ,'네뷸라', '도르마무' ,'샹치', '캡틴마블'];
+let hero_text_arr = ['스칼렛위치', '가모라' ,'블랙위도우', '샹치', '비전', '블랙팬서' ,'네뷸라' ,'캡틴아메리카' ,'호크아이', '맨티스', '앤트맨', '로켓라쿤', '스파이더맨', '드랙스', '팔콘', '워머신', '닥터스트레인지', '로키' ,'윈터솔져' ,'오코예' ,'타노스' ,'발키리' ,'슈리', '토르',  '헐크' ,'헤임달' ,'스타로드' ,'웡' ,'그루트', '도르마무' ,'아이언맨', '캡틴마블'];
 let round = 32;
 let battle = 1;
 let first_img= 0, second_img = 1;
@@ -32,17 +32,8 @@ const init = () =>{
 
 const set_Img = (img1, img2) =>{
 
-    //document.querySelector('.img1 > img').setAttribute('src', '../img/'+ 1+img1 + '.jpg'); 
-    //document.querySelector('.img2 > img').setAttribute('src', '../img/'+ 1+img2 + '.jpg'); 
-    // document.querySelector('.img1 > img').setAttribute('alt',''+(1+img1)); 
-    //document.querySelector('.img2 > img').setAttribute('alt',''+(1+img2));
-    //document.getElementById("img1").setAttribute('src',''+('../img/'+ (1+img1) + '.jpg')); 
-    //document.getElementById("img2").src = "../img" + (1+img2) + ".jpg";
-    document.getElementById('img1').setAttribute('src', '../img/' + hero_text_arr[img1]+'.jpg' );
-    document.getElementById('img2').setAttribute('src', '../img/' + hero_text_arr[img2]+'.jpg' );
-
-
-
+    document.querySelector('.img1 > img').setAttribute('src', './img/' + hero_text_arr[img1]+'.jpg' );
+    document.querySelector('.img2 > img').setAttribute('src', './img/' + hero_text_arr[img2]+'.jpg' );
     
     document.querySelector('.hero1').innerText = hero_text_arr[img1];
     document.querySelector('.hero2').innerText = hero_text_arr[img2];
@@ -56,7 +47,7 @@ const next_battle = (select, non_select)  => {
         document.getElementById('over').style.display = 'block';
         document.querySelector('.result').innerText = '당신의 최애 캐릭터는? ';
         document.querySelector('.result_hero').innerText = hero_text_arr[select];
-        document.querySelector('.result_img').setAttribute('src', '../img/'+  + '.jpg'); 
+        document.querySelector('.result_img').setAttribute('src', './img/'+ hero_text_arr[select] + '.jpg'); 
         return;
     }
 

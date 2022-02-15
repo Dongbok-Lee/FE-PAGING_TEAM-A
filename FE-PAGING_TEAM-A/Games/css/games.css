@@ -59,8 +59,11 @@ body {
     -webkit-user-select:none; 
     -moz-user-select:none; 
     -ms-user-select:none; 
-    user-select:none
+    user-select:none;
+    -ms-overflow-style: none;
 }
+
+::-webkit-scrollbar { display: none; }
 
 /* 헤더 */
 header{
