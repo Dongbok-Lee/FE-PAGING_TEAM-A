@@ -37,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
 body{
     min-width: 1080px;
 }
-
+::-webkit-scrollbar { display: none; }
 /*헤더*/
 header{
     width: 100%;

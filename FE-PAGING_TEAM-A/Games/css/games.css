@@ -133,7 +133,10 @@ header{
 #mainpage_logo:hover a img {
 	height: 141px;	
 }
-
+.nav_list .current a{
+	font-size: 33px;
+	color: #ff4242;
+}
 /* 배경 */
 .bg {
     background-image: url("../img/main.jpg");

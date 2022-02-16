@@ -134,7 +134,10 @@ height:136px;
 #mainpage_logo:hover a img {
 height: 141px;	
 }
-
+.nav_list .current a{
+	font-size: 33px;
+	color: #ff4242;
+}
   /* 시작화면 배경 */
   .bg_start {
     background-image: url("../img/퀴즈시작.jpg");

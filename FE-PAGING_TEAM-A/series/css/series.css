@@ -53,6 +53,7 @@ table {
 body{
 	min-width: 1080px;
 }
+::-webkit-scrollbar { display: none; }
 /*헤더*/
 header{
 	height:170px;

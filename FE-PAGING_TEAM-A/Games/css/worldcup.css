@@ -133,7 +133,10 @@ height:136px;
 #mainpage_logo:hover a img {
 height: 141px;	
 }
-
+.nav_list .current a{
+	font-size: 33px;
+	color: #ff4242;
+}
   /* 배경 */
   .bg_start {
       background-image: url("../img/이상형월드컵시작.jpg");

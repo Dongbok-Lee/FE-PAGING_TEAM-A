@@ -30,7 +30,7 @@ table {
 body{
 	min-width: 1080px;
 }
-
+::-webkit-scrollbar { display: none; }
 header{
     height: 170px;
     width: 100%;
@@ -75,7 +75,7 @@ header{
 .mainpage_nav ul li:hover a  { 
 	font-size: 33px;
 	color: #ff4242;
-}
+},
 #mainpage_logo a img{ 
 	height:136px;
 }

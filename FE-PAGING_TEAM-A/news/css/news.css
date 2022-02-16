@@ -61,7 +61,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+::-webkit-scrollbar { display: none; }
 /*헤더 (임시)*/
 header{
     height: 170px;

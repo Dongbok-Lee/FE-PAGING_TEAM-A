@@ -52,6 +52,7 @@ table {
 }
 
 /*전체*/
+
 body{
     min-width: 1080px;
     font-family: 'Vitro_core';
@@ -59,7 +60,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
+::-webkit-scrollbar { display: none; }
 /*헤더 (임시)*/
 header{
     height: 170px;
