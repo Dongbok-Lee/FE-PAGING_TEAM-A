@@ -53,7 +53,8 @@ const next_battle = (select, non_select)  => {
 
     battle++; 
 
-    document.querySelector('.round').innerText =  round +'강 ' + ((battle) + '/'+(round/2));
+    if(round == 2) document.querySelector('.round').innerText =  '결승';
+    else document.querySelector('.round').innerText =  round +'강 ' + ((battle) + '/'+(round/2));
 
     denote_Winner(select,non_select);
 
