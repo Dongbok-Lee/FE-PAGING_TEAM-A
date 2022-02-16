@@ -57,6 +57,11 @@ body {
   margin: 20px;
   cursor: pointer;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease-out;
+}
+
+.characters img:hover {
+  transform: translateY(-10px);
 }
 
 .characters .name {
@@ -78,7 +83,7 @@ body {
 }
 
 #modal .modal_window {
-  border: 1px solid rgba(255, 46, 46, 0.555);
+  border: 1px solid rgba(107, 107, 107, 0.747);
   background: white;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 10px;

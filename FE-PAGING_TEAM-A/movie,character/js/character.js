@@ -16,7 +16,7 @@ let appearanceTemp = document.createElement("div");
 let newScene = document.createElement("img");
 
 for (let i = 0; i < $character_img.length; i++) {
-  $character_img[i].addEventListener("click", (e) => {
+  $character_img[i].addEventListener("dblclick", (e) => {
     const temp = e.target.src;
     let heroname = temp.slice(temp.search("img") + 24, -4); // jpg, png
 
