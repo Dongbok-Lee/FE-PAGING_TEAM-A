@@ -1,0 +1,226 @@
+/* 초기화 코드 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 폰트 */
+@font-face {
+    font-family: 'mono';
+    src: url('../fonts/Monologue\ DEMO.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+/* 전체*/
+body {
+    min-width: 1080px; 
+    font-family: "Vitro_core";
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar { display: none; }
+
+/* 헤더 */
+header{
+    height: 170px;
+    width: 100%;
+    background: #3C3C3C;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mainpage_nav{
+	width: 35%;
+	margin-top: 110px;
+	/* display: flex;
+	flex-direction: column; */
+}
+
+.nav_list{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav_line{
+	position: relative;
+}
+
+.nav_list::before{
+	top: -20px;
+	position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: solid 3px #fff;
+}
+
+.mainpage_nav ul li {
+	display: inline-block;
+	font-family: mono;
+	font-size: 28.4335px;
+	line-height: 39px;
+	letter-spacing: -0.02em;
+	/* padding-left: 50px;
+	padding-right: 50px; */
+}
+
+.mainpage_nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+.mainpage_nav ul li:hover a  {   
+	font-size: 33px;
+	color: #ff4242;
+}
+
+#mainpage_logo a img{ 
+	height:136px;
+}
+
+#mainpage_logo:hover a img {
+	height: 141px;	
+}
+
+/* 배경 */
+.bg {
+    background-image: url("../img/main.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Games */
+section {
+    position: relative;
+    height: 650px;
+}
+
+.Games {
+    position: absolute;
+    font-size: 64px;
+    color: #fff;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 7px solid #F9F9F9;
+    padding: 10px;
+}
+
+/* 메인 */
+main {
+    height: 2000px;
+}
+
+/* 게임 설명 */
+.game_title {
+    width: 950px;
+    font-size: 48px;
+    color: #fff;
+    margin: auto;
+    padding-bottom: 28px;
+    border-bottom: 3px solid #9E9E9E;
+}
+
+.game2_title {
+    width: 950px;
+    font-size: 48px;
+    color: #fff;
+    margin: 220px auto 0 auto;
+    padding-bottom: 28px;
+    border-bottom: 3px solid #9E9E9E;
+}
+
+.game {
+    width: 1000px;
+    height: 480px;
+    margin: 58px auto 0;
+    background-color: rgba( 249, 249, 249, 0.4 );
+    cursor: pointer;
+}
+
+.game img {
+    width: 480px;
+    height: 330px;
+    box-shadow: 20px 20px 5px rgba( 0, 0, 0, 0.7 );
+    margin: 75px 0 75px 58px;
+    float: left;
+}
+
+.game:hover {
+    transform: scale(1.02);
+  }
+
+.game_text {
+    width: 350px;
+    float: right;
+    margin: 112px 40px 0 0;
+}
+
+.game_name {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #FFF;
+    line-height: 120%; 
+}
+
+.game_contents {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 25px;
+    line-height: 120%; 
+}

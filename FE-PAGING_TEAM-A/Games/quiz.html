@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/quiz.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <title>Marvel Cinematic Universe</title>
+  </head>
+
+  <body>
+    <header>
+      <div  class="mainpage_nav">
+              <div class = "nav_line">
+                  <ul class = "nav_list">
+                      <li class="mainpage_nav_li_left"><a href="#">CHARACTERS</a></li>
+                      <li class="mainpage_nav_li_left"><a href="#">SERIES</a></li>
+                      <li class="mainpage_nav_li_left"><a href="#">NEWS</a></li>
+                  </ul>
+              </div>
+
+      </div>
+      <div id="mainpage_logo">
+          <a href="mainpage2.html"><img src="img/logo.png" ></a>
+      </div>
+
+      <div class="mainpage_nav">
+          <div class = "nav_line">
+              <ul class = "nav_list">
+                  <li class="mainpage_nav_li_right"><a class="current" href="#">GAMES</a></li>
+                  <li class="mainpage_nav_li_right"><a href="#">MOVIES/DRAMA</a></li>
+              </ul>
+          </div>
+  </header>
+
+    <div class="bg_start" id="start">
+      <section>
+          <h1 class="quiz_title">마블 시네마틱 유니버스 퀴즈</h1>
+          <button type="button" onclick="start_quiz()" class="btn">START</button>
+      </section>
+  </div>
+
+    <div class="bg_game" id="game">
+        <main>
+            <div class="questionbox">
+            <h1 class="question"></h1>
+            <div class="options">
+                <button type="button" onclick = 'next_quiz(1)' class="option">1번</button>
+                <button type="button" onclick = 'next_quiz(2)' class="option">2번</button>
+                <button type="button" onclick = 'next_quiz(3)' class="option">3번</button>
+                <button type="button" onclick = 'next_quiz(4)' class="option">4번</button>
+            </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="bg_over" id="over">
+      <div class="resultbox">
+        <h1 class = "result"></h1>
+        <h2 class = "result_text"></h2>
+        <h3 class = "result_count"></h3>
+      </div>
+    </div>
+
+    <script src="./data/quiz.json"></script>
+    <script src="./js/quiz.js"></script>
+  </body>
+</html>
