@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -44,6 +45,12 @@ table {
 }
 
 /* 폰트 */
+@font-face {
+  font-family: 'mono';
+  src: url('../fonts/Monologue\ DEMO.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 @font-face {
     font-family: 'Vitro_core';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
